@@ -52,10 +52,24 @@ Dot Ball % = DIVIDE(SUM(t20_bowling_summary[zeros]),SUM(t20_bowling_summary[ball
 
 Player selection = if(ISFILTERED(t20_players_info[name]),"1","0")
 
-Display Text = if([Player selection] = "1"," ","Select Player(s) by clicking the player's name to see their invidual or combined strength")
+Display Text = if([Player selection] = "1"," ","Select Player(s) by clicking the player's name to see their individual or combined strength")
+
+
 
 Color Callout Value =if([Player selection]="0","#E8D166","#1D1D2E")
 
 boundary runs batting =t20_batting_summary[fours]*4 + t20_batting_summary[sixes]*6
-
 boundary runs bowling =t20_bowling_summary[fours]*4+t20_bowling_summary[sixes]*6
+
+
+# Statistical Analysis (Random Forst) :
+I have decided to apply the Random Forest Machine Learning Algorithm to make an assumption both on Batting Performance for Winning the Match and Bowling Performance for Winning the match….
+                                          For these, I used some Performance Matrices.
+                                          1) Precision
+                                          2) Recall
+                                          3) F1- Score
+                                          4) Support
+              Performing Random Forest Model We got an Accuracy of 75% for Both Bowling and Batting Performances.
+                                       
+
+
